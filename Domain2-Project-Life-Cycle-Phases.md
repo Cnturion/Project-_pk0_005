@@ -19,6 +19,7 @@ flowchart LR
 - [2.3 — Planning](#23--planning)
 - [2.4 — Execution](#24--execution)
 - [2.5 — Closing](#25--closing)
+- [Putting it together — document flow across the phases](#putting-it-together--document-flow-across-the-phases)
 
 ---
 
@@ -253,3 +254,90 @@ A project ends when objectives are met and the sponsor validates the deliverable
 - **Project closeout report** and **closure meeting**.
 
 > Lessons learned, retrospectives, and verification/validation are covered in [Domain 1 → 1.7](Domain1-Project-Management-Concepts.md#17--quality--performance-management).
+
+---
+
+## Putting it together — document flow across the phases
+
+A common exam trap is knowing *what* a document is but not *when* it shows up. Here's the order of things: which documents get **created**, **reviewed/used**, and **approved** in each phase.
+
+```mermaid
+flowchart LR
+    A[Discovery] --> B[Initiation]
+    B --> C[Planning]
+    C --> D[Execution]
+    D --> E[Closing]
+    A -.-> a[Business Case]
+    B -.-> b[Charter ·<br/>Stakeholder Register]
+    C -.-> c[PM Plan · Scope ·<br/>WBS · Risk Register]
+    D -.-> d[Status Reports ·<br/>Change/Issue/Defect Logs]
+    E -.-> e[Closeout Report ·<br/>Lessons Learned]
+```
+
+### Document flow at a glance
+
+| Phase | What happens | Created | Reviewed / used | Approved |
+|---|---|---|---|---|
+| **Discovery** | Decide if the project is worth doing. | Business Case | ROI analysis, existing contracts, market research | **Business Case** (sponsor decides to proceed) |
+| **Initiation** | Formally authorize the project. | Project Charter, Stakeholder Register, initial RACI, Records Management Plan | Business Case, existing artifacts | **Project Charter** (sponsor) |
+| **Planning** | Build the detailed plan. | Project Management Plan + baselines, Scope Statement, WBS & WBS Dictionary, schedule, budget, Communication Plan, Risk Management Plan + Risk Register, Quality Plan, Change Management Plan, RTM | Charter, scope baseline | **Project Management Plan**, **Scope Statement** (scope baseline), cost baseline |
+| **Execution** | Do the work; keep it on track. | Status Reports, Change Requests, Change Log, Issue Log, Defect Log | PM plan, baselines, Risk Register | **Change requests** (via the CCB), **deliverables** (validation) |
+| **Closing** | Wrap up and hand over. | Project Closeout Report, Lessons Learned, final budget reconciliation | Scope Statement (to validate deliverables), contracts | **Final sign-off / acceptance** (sponsor), **contract closure** |
+
+> **Note:** tracking and reporting (status reports, updating the risk register and logs) happen *continuously* during execution — monitoring and controlling is woven through the phase, not a separate step in the Project+ model.
+
+### What the project manager does in each phase
+
+**Discovery / concept**
+
+- Support building the business case and ROI analysis.
+- Map current state vs. future state.
+- Identify existing contracts and artifacts the project could reuse.
+- Help with rough, high-level budgeting and feasibility.
+
+**Initiation**
+
+- Develop the project charter with the sponsor.
+- Identify and assess stakeholders; build the stakeholder register.
+- Establish accepted communication channels.
+- Develop a records management plan and define access requirements.
+- Review existing artifacts and confirm the solution design.
+- Run the project kickoff.
+
+**Planning**
+
+- Assess the resource pool; assign and train the team.
+- Develop the communication plan, detailed scope statement, and WBS/backlog.
+- Build the schedule and determine the budget.
+- Develop the quality plan and perform an initial risk assessment.
+- Develop the transition/release plan.
+- Assemble the project management plan; set baselines, milestones, and the minimally viable product (MVP).
+- Stand up the change control process.
+
+**Execution**
+
+- Execute tasks according to the project management plan.
+- Lead organizational change management and drive adoption.
+- Manage vendors — enforce rules of engagement, monitor performance, approve deliverables.
+- Run project meetings and send updates.
+- Track and report: team touchpoints, risk reporting, status and progress reporting.
+- Update the budget and timeline; manage changes, risks, and issues.
+- Manage conflict and coordinate phase gate reviews.
+
+**Closing**
+
+- Evaluate the project and validate deliverables against scope.
+- Close contracts, remove access, and release resources.
+- Hold the closure meeting and write the project closeout report.
+- Collect stakeholder feedback and archive documentation.
+- Reconcile the budget, recognize the team, and obtain final project sign-off.
+
+### Walkthrough — the Northwind portal project
+
+Following the [sample documents](samples/) in order shows how this plays out:
+
+1. **Discovery** — Tom (Business Analyst) writes the [Business Case](samples/01-business-case.md): cut call-center load, ~7-month payback. The sponsor reviews it and approves proceeding.
+2. **Initiation** — Priya (PM) drafts the [Project Charter](samples/02-project-charter.md); sponsor Maria approves it, formally authorizing the project. Stakeholders are identified and the [RACI](samples/09-raci-matrix.xlsx) takes shape.
+3. **Planning** — the team produces the [Scope Statement](samples/03-scope-statement.md) (→ scope baseline), the [Change Management Plan](samples/04-change-management-plan.md), and the initial [Risk Register](samples/06-risk-register.xlsx). Baselines are set and approved.
+4. **Execution** — work proceeds in sprints. Priya issues weekly [Status Reports](samples/05-status-report.md); changes flow through the [Change Log](samples/08-change-log.xlsx) and CCB; problems land in the [Issue Log](samples/07-issue-log.xlsx). The Risk Register is updated as risks evolve.
+5. **Closing** — deliverables are validated against the scope statement, the sponsor signs off, contracts close, access is removed, and the team captures lessons learned.

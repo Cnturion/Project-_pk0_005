@@ -45,8 +45,9 @@ Securing the physical asset:
 
 Digital assets = data, spreadsheets, documents, etc.
 
-- **Access & permissions** — need-to-know access.
+- **Access & permissions** — need-to-know access (give people only the access their role requires — the principle of *least privilege*).
 - **Remote access** — MFA (multi-factor authentication) and authenticator apps.
+- **Privilege creep** — the gradual buildup of access rights beyond what someone needs, usually because old permissions aren't removed after role changes. Fight it with regular access reviews and by removing access promptly when roles change (or when a project closes — see Domain 2.5).
 
 ### Data security & branding
 
