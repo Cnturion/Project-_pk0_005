@@ -26,7 +26,7 @@ flowchart LR
 
 **The core question:** *Is this project even worth doing?*
 
-This phase is about building the **business case** — the value proposition for the project. Typical work: analyze ROI, prepare the business case, identify existing contracts to reuse, and rough budgeting.
+This phase is about building the **business case** — the value proposition for the project. Typical work: analyze return on investment (ROI), prepare the business case, identify existing contracts to reuse, and rough budgeting.
 
 ### Picking the right project
 
@@ -60,6 +60,8 @@ Two broad approaches: **mathematical modeling** (use formulas/algorithms to scor
 
 ![Activities in the initiation phase](images/05-initiation-phase-activities.png)
 
+> See filled-in examples in [`samples/`](samples/): [Business Case](samples/01-business-case.md), [Project Charter](samples/02-project-charter.md), [Scope Statement](samples/03-scope-statement.md), and [RACI Matrix](samples/09-raci-matrix.xlsx).
+
 ### The project charter
 
 The **charter** is issued by the **sponsor** and formally authorizes the project. The sponsor provides resources and support and is accountable for success.
@@ -81,7 +83,7 @@ A charter typically holds:
 
 A **stakeholder** is anyone who affects, is affected by, or thinks they're affected by the project.
 
-- **Internal** — sponsor, PMO, program manager, team members, other managers.
+- **Internal** — sponsor, PMO (project management office), program manager, team members, other managers.
 - **External** — customers, end users, suppliers, shareholders, competitors.
 
 **Assessment techniques:**

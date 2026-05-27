@@ -24,7 +24,7 @@ Each chart answers a different "where are we?" question:
 
   ![Gantt chart](images/33-gantt-chart-review.png)
 
-- **Project network diagram (PERT)** — shows work and dependencies as a network.
+- **Project network diagram (PERT — Program Evaluation and Review Technique)** — shows work and dependencies as a network.
 
   ![Project network diagram](images/34-project-network-diagram.png)
 
@@ -53,13 +53,28 @@ The records that keep a project honest:
 | **Defect Log** | Records results of inspections and tests. |
 | **Status Report** | Summarizes project progress. |
 
+#### Sample entries
+
+> Full filled-in versions of these documents are in [`samples/`](samples/) — including Excel [Risk Register](samples/06-risk-register.xlsx), [Issue Log](samples/07-issue-log.xlsx), [Change Log](samples/08-change-log.xlsx), and [RACI Matrix](samples/09-raci-matrix.xlsx).
+
+- **Business Case:** *"Migrating to cloud hosting cuts server costs ~30% ($60k/year). Recommend proceeding with AWS over an on-prem refresh."*
+- **Project Charter:** *"Deliver a self-service customer portal by Q4. Sponsor: VP of Sales. PM authorized to spend up to $150k."*
+- **Project Management Plan:** *"Work proceeds in 2-week sprints. Scope, schedule, and cost baselines are set. All changes route through the CCB."*
+- **Requirements Traceability Matrix (RTM):** *"REQ-014 'password reset' — requested by the Security team, justifies a SOC 2 control, maps to WBS item 3.2."*
+- **Risk Register:** *"R-01: cloud API delay — Medium probability / High impact — mitigate by starting integration early — owner: J. Lee."*
+- **Risk Report:** *"Overall project risk: Medium. Top risk: vendor delay. 3 high risks open, 2 closed this month."*
+- **Change Log:** *"CR-007: add single sign-on login — approved by the CCB on May 4 — status: in development."*
+- **Issue Log:** *"I-02: login page rejects valid users — Critical — owner: A. Kim — Resolved May 6."*
+- **Defect Log:** *"D-11: checkout miscalculates sales tax — found in regression testing — severity: High — fixed."*
+- **Status Report:** *"Week 12: 80% of the sprint complete, on budget, one high issue open, go-live on track for June 1."*
+
 ---
 
 ## 3.2 — Productivity tools
 
 This objective covers the everyday tools teams use to get work done:
 
-- **Communication tools** — email, messaging/chat/SMS, telephone, video, meetings, enterprise social media.
+- **Communication tools** — email, messaging/chat/SMS (short message service), telephone, video, meetings, enterprise social media.
 - **Collaboration tools** — real-time co-editing, file sharing, e-signature/workflow, whiteboards, wikis, version control, time tracking, task boards, the RTM.
 - **Meeting tools** — polling, calendaring, conferencing platforms, print media.
 - **Documentation / office tools** — word processing, spreadsheets, presentations, diagramming.

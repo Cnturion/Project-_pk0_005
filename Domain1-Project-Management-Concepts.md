@@ -111,7 +111,7 @@ A change request can come from anyone on the project. It should be in writing an
 
 1. **Create / receive** the change request.
 2. **Log** it in the change request log.
-3. **Preliminary review** — chat with the team and SMEs: is it feasible?
+3. **Preliminary review** — chat with the team and subject matter experts (SMEs): is it feasible?
 4. **Assess impact** — what else does this touch?
 5. **Document the recommendation** from that assessment.
 6. **Determine the decision makers**.
@@ -149,6 +149,8 @@ A **risk** is an *uncertain* event that, if it happens, will affect the project.
 Agile carries more uncertainty by nature, so it manages risk by committing to only a little work at a time.
 
 ### Identifying risks: SWOT
+
+**SWOT** stands for **Strengths, Weaknesses, Opportunities, Threats** — a four-quadrant way to brainstorm risks. Strengths and weaknesses look *inward*; opportunities and threats look *outward*.
 
 | | Positive | Negative |
 |---|---|---|
@@ -215,8 +217,38 @@ A **risk** *might* happen. An **issue** has *already* happened and is impacting 
 - **Risk Management Plan** — your "how-to" guide for handling risk. Part of the project plan.
 - **Risk Register** — the running list of risks (ID, description, owner). Usually a spreadsheet; review it regularly.
 - **Contingency Plan** — your planned response to identified risks.
-- **Fallback Plan** — plan B.
+- **Fallback Plan** — plan B (used when the contingency plan also fails).
 - **Issue Log** — the running record of issues and their status.
+
+#### Sample documents
+
+> Full filled-in examples live in [`samples/`](samples/) — see the [Risk Register](samples/06-risk-register.xlsx) and [Issue Log](samples/07-issue-log.xlsx).
+
+**Risk Management Plan (excerpt):**
+
+> Risks are scored 1–5 on both probability and impact. Any risk scoring High/High is escalated to the sponsor within 24 hours. Risks are reviewed at every sprint retrospective. The project manager owns the risk register.
+
+**Risk Register:**
+
+| ID | Risk | Probability | Impact | Response | Owner |
+|---|---|---|---|---|---|
+| R-01 | Cloud vendor API delayed | Medium | High | Mitigate — start integration early | J. Lee |
+| R-02 | Lead developer may leave | Low | High | Transfer — cross-train a backup | PM |
+
+**Contingency Plan (example):**
+
+> If the payment gateway isn't certified by week 8, launch with the pre-built PayPal module and add the primary gateway in a later release.
+
+**Fallback Plan (example):**
+
+> If both the gateway *and* PayPal are blocked, postpone launch by two weeks and process orders manually.
+
+**Issue Log:**
+
+| ID | Issue | Raised | Severity | Owner | Status |
+|---|---|---|---|---|---|
+| I-01 | Test server crashed during user acceptance testing | May 3 | High | DevOps | In progress |
+| I-02 | Login page rejects valid users | May 5 | Critical | A. Kim | Resolved |
 
 ---
 
@@ -226,7 +258,7 @@ Mostly a Waterfall topic. Four moving parts: estimate durations, sequence activi
 
 ### Estimating durations
 
-Break the WBS into work packages, then into activities. Four techniques, from fastest to most accurate:
+Break the work breakdown structure (WBS) into work packages, then into activities. Four techniques, from fastest to most accurate:
 
 1. **Analogous** — use a similar past project. Apples to apples.
 2. **Parametric** — simple math (1 day per chimney → 4 chimneys = 4 days).
@@ -251,10 +283,10 @@ Break the WBS into work packages, then into activities. Four techniques, from fa
 
 **Successor/predecessor relationships:**
 
-- **Finish-to-Start (FS)** — A must finish before B starts. *(Most common.)*
-- **Start-to-Start (SS)** — A must start before B starts.
-- **Finish-to-Finish (FF)** — A must finish before B finishes.
-- **Start-to-Finish (SF)** — A must start before B finishes. *(Rare.)*
+- **Finish-to-Start (FS)** — A must finish before B starts. *(Most common.)* *Example: the walls must be framed (A) before drywall can go up (B).*
+- **Start-to-Start (SS)** — A must start before B starts. *Example: once data migration starts (A), QA testing of the migrated records can start (B).*
+- **Finish-to-Finish (FF)** — A must finish before B finishes. *Example: coding (A) must be finished before code review (B) can be finished.*
+- **Start-to-Finish (SF)** — A must start before B finishes. *(Rare.)* *Example: the new support system must go live (A) before the old system can be shut down (B).*
 
 ```mermaid
 flowchart LR
@@ -320,10 +352,10 @@ flowchart LR
 
 Compare current performance against the **baselines** in the original project management plan.
 
-- **Cost Variance (CV)** — work done vs. money spent. *Negative = over budget.*
-- **Schedule Variance (SV)** — work done vs. work planned. *Negative = behind schedule.*
+- **Cost Variance (CV)** — value of work done vs. money actually spent. *Negative = over budget.* *Example: you've completed $10k worth of work but spent $12k → CV = –$2k, so you're $2k over budget.*
+- **Schedule Variance (SV)** — value of work done vs. work planned by now. *Negative = behind schedule.* *Example: you planned to have $10k of work done by today but only $8k is finished → SV = –$2k, so you're behind schedule.*
 - **Iteration burndown chart** — work remaining in the iteration.
-- **KPIs** — measurable values that track progress.
+- **KPIs (key performance indicators)** — measurable values that track progress.
 - **Phase gate review** — a checkpoint at the end of a phase: continue or not?
 
 ![Monitoring budget key takeaways](images/23-monitoring-budget.png)
@@ -346,7 +378,7 @@ A **quality management plan** is your "how-to" guide for quality. Quality work l
 
 ### Verification vs. validation
 
-- **Verification** — does it meet the spec/requirement? Done through QC. *Did we build it right?*
+- **Verification** — does it meet the spec/requirement? Done through quality control (QC). *Did we build it right?*
 - **Validation** — formal acceptance that it matches scope. Happens *after* verification. *Did we build the right thing?*
 
 Validation happens as major deliverables land, the customer may request changes first, and you do it **even if the project is cancelled**.
@@ -434,7 +466,7 @@ The communication plan defines **who** gets **what**, in which **format**, and *
 **Physical resources:**
 
 - **Capital resources** — reusable physical assets (machines, buildings).
-- **Resource life cycle:**
+- **Resource life cycle** — the stages a resource moves through:
 
 ```mermaid
 flowchart LR
@@ -444,12 +476,22 @@ flowchart LR
     D --> E[Successor<br/>Planning]
 ```
 
+  - **Acquisition** — obtain the resource (buy hardware, hire staff, license software).
+  - **Maintenance** — keep it running (servicing, patching, support).
+  - **Hardware decommissioning** — safely retire old equipment (wipe data, then dispose of or recycle it).
+  - **End-of-life software** — retire software the vendor no longer supports or patches.
+  - **Successor planning** — line up the replacement (next-gen hardware, upgraded software, or a trained backup person) *before* the current resource is gone.
+
 **Human resources:**
 
-- **Dedicated** — 100% on the project. **Shared** — only a slice of their time.
-- **Over-allocated** — too much assigned. **Benched** — available but idle.
-- **Internal** (employees) vs. **external** (contractors).
-- **Core/operational** — there start to finish. **Extended/functional** — jumps in when needed.
+- **Dedicated** — 100% of their time is on the project.
+- **Shared** — only a slice of their time is on the project.
+- **Over-allocated** — too much work has been assigned to them.
+- **Benched** — available but not currently being used.
+- **Internal** — employees.
+- **External** — contractors.
+- **Core / operational** — on the project from start to finish.
+- **Extended / functional** — jumps in when needed (often a specialist).
 
 ### Organizational structures
 
@@ -476,17 +518,17 @@ In a **matrix**, the PM *shares* authority with functional managers.
 - **Project Coordinator** — limited authority (functional / weak-matrix setups).
 - **Sponsor** — pays for the project; may be the customer.
 - **Stakeholder** — anyone affected by the project, internal or external.
-- **PMO** — supports project management efforts.
+- **PMO (Project Management Office)** — supports project management efforts.
 - **Program Manager** — coordinates related projects toward a business goal.
 - **Business Analyst** / **Product Manager** — focus on the end product.
-- **Project Team** — architects (design), developers/engineers (build), testers/QA (verify), SMEs (specialist knowledge).
+- **Project Team** — architects (design), developers/engineers (build), testers/QA — quality assurance (verify), SMEs (specialist knowledge).
 - **Scrum Master** — servant leader who clears blockers for the Agile team.
 
 ### Acquiring & assigning resources
 
 - **Gap analysis** — measure where you are vs. where you want to be (resource pool, skills).
 - For external resources, use **vendor evaluation** (cost-benefit, competitive analysis, technical approach, references).
-- **Resource loading** fills available time with tasks; use the **project org chart** and **RACI matrix** as tools.
+- **Resource loading** fills available time with tasks; use the **project org chart** and **RACI (Responsible, Accountable, Consulted, Informed) matrix** as tools.
 
 ![Assigning resources](images/20-assigning-resources.png)
 
@@ -500,11 +542,11 @@ flowchart LR
     P --> A[Adjourning]
 ```
 
-- **Forming** — getting acquainted; still a group, not a team.
-- **Storming** — roles emerge; performance can dip.
-- **Norming** — trust and collaboration build.
-- **Performing** — the team clicks and builds on each other's ideas.
-- **Adjourning** — the team wraps up and disbands.
+- **Forming** — getting acquainted; still a group, not a team. *Example: in kickoff week, members are polite and unsure of each other, and wait for direction.*
+- **Storming** — roles emerge and friction shows; performance can dip. *Example: two developers clash over which tech stack to use, and progress slows.*
+- **Norming** — trust and collaboration build. *Example: the team agrees on coding standards and starts helping each other hit deadlines.*
+- **Performing** — the team clicks and builds on each other's ideas. *Example: features ship smoothly and the team solves problems without the PM stepping in.*
+- **Adjourning** — the team wraps up and disbands. *Example: after go-live, the team documents lessons learned and members roll off to new projects.*
 
 ![The Tuckman Ladder](images/21-tuckman-ladder.png)
 
@@ -543,9 +585,9 @@ flowchart LR
   - **FPIF (Fixed Price Incentive Fee)** — fixed price plus a bonus for hitting targets (e.g., early delivery).
   - **FPEPA (Fixed Price with Economic Price Adjustment)** — fixed price that can flex with inflation or currency shifts on long contracts.
 - **Cost plus (cost reimbursable)** — buyer pays the cost *plus* a fee; best when scope will change a lot. Three flavors:
-  - **CPFF (Cost Plus Fixed Fee)** — costs reimbursed plus a fixed fee.
-  - **CPIF (Cost Plus Incentive Fee)** — costs reimbursed plus a performance-based bonus.
-  - **CPAF (Cost Plus Award Fee)** — costs reimbursed plus a fee the buyer awards based on satisfaction.
+  - **CPFF (Cost Plus Fixed Fee)** — costs reimbursed plus a fixed fee. *Example: a vendor builds your server room; you cover all material and labor costs plus a flat $50k fee, no matter the final cost.*
+  - **CPIF (Cost Plus Incentive Fee)** — costs reimbursed plus a performance-based bonus. *Example: costs covered, plus a $20k bonus if they finish testing two weeks early.*
+  - **CPAF (Cost Plus Award Fee)** — costs reimbursed plus a fee the buyer awards based on satisfaction. *Example: costs covered, plus a discretionary fee granted after a quarterly quality review.*
 - **Time and materials** — a hybrid of the two; e.g., labor billed at an hourly rate plus materials.
 
 ### Other vendor documents

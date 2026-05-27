@@ -30,7 +30,7 @@ A project should align with the company's **vision, mission, and values**.
 
 Securing the physical asset:
 
-- **Mobile devices** — PIN.
+- **Mobile devices** — PIN (personal identification number) lock.
 - **Removable media** — encrypt; passcode to decrypt.
 - **Facilities** — biometrics, badges, guards.
 - **Policies** — define how assets are protected; review at least annually.
@@ -46,7 +46,7 @@ Securing the physical asset:
 Digital assets = data, spreadsheets, documents, etc.
 
 - **Access & permissions** — need-to-know access.
-- **Remote access** — MFA and authenticator apps.
+- **Remote access** — MFA (multi-factor authentication) and authenticator apps.
 
 ### Data security & branding
 
@@ -55,8 +55,8 @@ Some data needs more protection than others:
 | Data type | Classification |
 |---|---|
 | Advertising data | Public |
-| HR data (PII) | Confidential, need-to-know |
-| Trade secrets (IP) | Secret |
+| HR data (PII — personally identifiable information) | Confidential, need-to-know |
+| Trade secrets (IP — intellectual property) | Secret |
 | National secrets | Top Secret |
 
 **Branding restrictions** protect the company's brand:
@@ -79,10 +79,10 @@ Protect data you own or collect:
 
 ### Privacy regulations by region
 
-- **Canada** — PIPEDA.
-- **EU** — GDPR.
-- **US** — no single federal law; some states have their own (e.g., **CCPA** in California).
-- Also know **HIPAA** for health data.
+- **Canada** — PIPEDA (Personal Information Protection and Electronic Documents Act).
+- **EU** — GDPR (General Data Protection Regulation).
+- **US** — no single federal law; some states have their own (e.g., the CCPA — California Consumer Privacy Act).
+- Also know **HIPAA** (Health Insurance Portability and Accountability Act) for health data.
 
 ### Your job as PM
 
@@ -96,25 +96,25 @@ Provide training, keep policies in place, and involve the legal team.
 
 ### Infrastructure
 
-- **Computing services** and **multitiered architecture** (database, processing, UI).
-- **Networking** — LAN (local) and WAN (wide area).
+- **Computing services** and **multitiered architecture** (database, processing, UI — user interface).
+- **Networking** — LAN (local area network) and WAN (wide area network).
 - **Storage** — hard drive; **NAS** (Network Attached Storage) / **SAN** (Storage Area Network); cloud storage; data warehouse.
 - **Documentation** — e.g., policies.
 
 ### Cloud models
 
-- **IaaS** — vendor handles the underlying hardware.
-- **PaaS** — a platform for building applications.
-- **SaaS** — ready-to-use software for a fee (e.g., Salesforce, M365).
-- **XaaS** — anything you can subscribe to for a fee.
+- **IaaS (Infrastructure as a Service)** — vendor handles the underlying hardware.
+- **PaaS (Platform as a Service)** — a platform for building applications.
+- **SaaS (Software as a Service)** — ready-to-use software for a fee (e.g., Salesforce, M365).
+- **XaaS (Anything as a Service)** — anything you can subscribe to for a fee.
 
 ### Software you should recognize
 
-- **ERP** — integrates accounting, production, HR, procurement into one shared system.
-- **CRM** — tracks customers, sales, and support (e.g., Salesforce).
+- **ERP (Enterprise Resource Planning)** — integrates accounting, production, HR, procurement into one shared system.
+- **CRM (Customer Relationship Management)** — tracks customers, sales, and support (e.g., Salesforce).
 - **Databases** — **structured** (tables) vs. **unstructured** (video, audio, images).
-- **EDRMS** — manages documents and access controls (e.g., SharePoint).
-- **CMS** — creates and manages websites.
+- **EDRMS (Electronic Document and Records Management System)** — manages documents and access controls (e.g., SharePoint).
+- **CMS (Content Management System)** — creates and manages websites.
 - **Financial system** — manages financial data.
 
 ---
