@@ -1,0 +1,111 @@
+# Domain 3 — Tools and Documentation
+
+> **Exam weight: 19%.** The charts, tools, and documents you use to run and report on a project.
+
+**Jump to an objective:**
+
+- [3.1 — Tools throughout the life cycle](#31--tools-throughout-the-life-cycle)
+- [3.2 — Productivity tools](#32--productivity-tools)
+- [3.3 — Quality & performance charts](#33--quality--performance-charts)
+
+---
+
+## 3.1 — Tools throughout the life cycle
+
+### Tracking charts
+
+Each chart answers a different "where are we?" question:
+
+- **Task board (Kanban board)** — shows work items moving through stages.
+
+  ![Task board / Kanban board](images/32-task-board.png)
+
+- **Gantt chart** — bars show each task's timeline.
+
+  ![Gantt chart](images/33-gantt-chart-review.png)
+
+- **Project network diagram (PERT)** — shows work and dependencies as a network.
+
+  ![Project network diagram](images/34-project-network-diagram.png)
+
+- **Milestone chart** — key milestones and their target dates.
+
+  ![Milestone chart](images/35-milestone-chart.png)
+
+- **Project organization chart** — the team's reporting structure.
+
+  ![Project organization chart](images/36-project-org-chart.png)
+
+### Documents, logs & registers
+
+The records that keep a project honest:
+
+| Document | What it's for |
+|---|---|
+| **Business Case** | Should the project proceed? Needs, options, recommendation, feasibility. |
+| **Project Charter** | Authorizes the project; sets objectives, boundaries, success criteria. |
+| **Project Management Plan** | How the project is run; holds subsidiary plans + baselines (scope, schedule, cost). |
+| **Requirements Traceability Matrix (RTM)** | Tracks who requested each requirement, its justification, and its WBS link. |
+| **Risk Register** | Logs all outputs from risk management activities. |
+| **Risk Report** | Summarizes individual risks and overall project risk. |
+| **Change Log** | All submitted changes and their status. |
+| **Issue Log** | Records issues and tracks their status. |
+| **Defect Log** | Records results of inspections and tests. |
+| **Status Report** | Summarizes project progress. |
+
+---
+
+## 3.2 — Productivity tools
+
+This objective covers the everyday tools teams use to get work done:
+
+- **Communication tools** — email, messaging/chat/SMS, telephone, video, meetings, enterprise social media.
+- **Collaboration tools** — real-time co-editing, file sharing, e-signature/workflow, whiteboards, wikis, version control, time tracking, task boards, the RTM.
+- **Meeting tools** — polling, calendaring, conferencing platforms, print media.
+- **Documentation / office tools** — word processing, spreadsheets, presentations, diagramming.
+- **PM scheduling tools** — cloud-based vs. on-premises vs. local install.
+- **Ticketing / case management** systems.
+
+> For how to *choose* a communication method, see [Domain 1 → 1.8](Domain1-Project-Management-Concepts.md#18--communication-management).
+
+---
+
+## 3.3 — Quality & performance charts
+
+These charts turn raw project data into decisions.
+
+### Quality charts
+
+- **Scatter diagram** — the relationship between two variables.
+
+  ![Scatter diagram](images/24-scatter-diagram.png)
+
+- **Histogram / Pareto chart** — frequency distribution (e.g., defects by type).
+
+  ![Pareto chart / histogram of defects by type](images/25-pareto-histogram.png)
+
+- **Control chart** — whether a process is stable and within limits.
+
+  ![Control chart](images/26-control-chart.png)
+
+### Performance & progress charts
+
+- **Run chart** — a line chart of data over time; shows performance trends.
+
+  ![Run chart](images/37-run-chart.png)
+
+- **Burndown chart** — work (or budget) remaining over time.
+
+  ![Sprint burndown chart](images/30-budget-burndown-chart.png)
+
+- **Burnup chart** — work completed over time against total scope.
+
+  ![Burnup chart](images/31-burnup-chart.png)
+
+- **Velocity chart** — an Agile (Scrum) measure of how much work the team completes per sprint.
+
+  ![Velocity chart](images/38-velocity-chart.png)
+
+- **Decision tree** — a map of outcomes across a series of related choices.
+
+  ![Decision tree](images/39-decision-tree.png)
