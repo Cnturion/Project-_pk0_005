@@ -19,6 +19,10 @@ Each file is split into the official objective numbers (e.g., 1.4, 2.3) so you c
 
 The [`samples/`](samples/) folder has filled-in examples of real PM documents — Business Case, Charter, Scope Statement, Change Management Plan, Status Report, plus Excel Risk Register, Issue Log, Change Log, and RACI Matrix — all built around one shared fictional project so they cross-reference each other. See the [samples index](samples/README.md).
 
+## Visual cheat sheets and exam tips
+
+[`CHEAT_SHEETS.md`](CHEAT_SHEETS.md) has 17 quick-reference concept maps for the most important groups of terms — estimating methods, contract types, risk responses, RACI, cloud models, EVM formulas, and more — plus a closing **Study and Exam Tips** section. Each diagram renders right on GitHub.
+
 ## Reference material
 
 | File | Description |
